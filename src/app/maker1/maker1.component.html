@@ -1,0 +1,60 @@
+<div class="container">
+    <h3>Maker Form 1</h3>
+    <div class="center" style="text-align: center;">
+        <app-load-spinner></app-load-spinner>
+    </div>
+    <form class="form" #f="ngForm" (ngSubmit)="onSubmit(f)">
+        <div class="row">
+            <div class="form-group col-sm-5">
+                <label for="customerId"><b>Customer Id</b>
+                </label>
+                <input class="form-control" type="number" name="customerId" ngModel required>
+            </div>
+
+            <div class="form-group col-sm-5">
+                <label for="firstname"><b>First Name</b>
+                </label>
+                <input class="form-control" type="text" name="firstname" ngModel required>
+            </div>
+            <div class="form-group col-sm-5">
+                <label for="lastname"><b>Last Name</b>
+                </label>
+                <input class="form-control" type="text" name="firstname" ngModel required>
+            </div>
+            <div class="form-group col-sm-5">
+                <label for="dateofbirth"><b>Date Of Birth</b>
+                </label>
+                <input class="form-control" type="date" name="dateofbirth" ngModel required>
+            </div>
+            <div class="form-group col-sm-5">
+                <label for="aadharnumber"><b>Aadhar Number</b>
+                </label>
+                <input class="form-control" type="text" name="aadharnumber" ngModel required>
+            </div>
+            <div class="form-group col-sm-5">
+                <label for="village_city_district"><b>
+                        Village/City/District
+                    </b>
+                </label>
+                <input class="form-control" type="text" name="village_city_district" ngModel required>
+            </div>
+            <div class="form-group col-sm-5">
+                <label for="state"><b>State</b>
+                </label>
+                <input class="form-control" type="text" name="state" ngModel required>
+            </div>
+            <div class="form-group col-sm-5">
+                <label for="pincode"><b>PIN Code</b>
+                </label>
+                <input class="form-control" type="text" name="pincode" ngModel required>
+            </div>
+        </div>
+        <br>
+        <div class='row'>
+            <div class="col-sm-12">
+                <button class="btn btn-success" [disabled]="!f.valid">Send</button> |
+                <button class="btn btn-primary">Clear</button>
+            </div>
+        </div>
+    </form>
+</div>

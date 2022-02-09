@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Customer Id</th>
+                    <th>Full Name</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr
+                    *ngFor="let user of customers | paginate:{itemsPerPage:10,currentPage:page,totalItems:totalItems}; let i = index">
+                    <td>{{user.customerId}}</td>
+                    <td>{{user.m1_firstname}} {{user.m1_lastname}}</td>
+                    <td><button class="btn btn-primary" [routerLink]="[i]">View</button></td>
+                </tr>
+
+            </tbody>
+        </table>
+        <pagination-controls class="text-center" (pageChange)="page=$event"></pagination-controls>
+    </div>
+</div>
